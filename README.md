@@ -1,0 +1,1 @@
+# sparta-open-weather-api
