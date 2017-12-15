@@ -18,11 +18,17 @@ class CurrentWeatherData
   end
 
   def get_location_coordinates
-    get_weather_location('wrexham').first
+    # get_city_info.first - Array
+    get_city_info.first[1]
+  end
+
+  def get_city_weather_info
+    
   end
 
 end
 
 x = CurrentWeatherData.new
-# p x.get_weather_location('wrexham').class
-p x.get_city_info.class
+# p x.get_city_info.class
+# p x.get_location_coordinates.class
+# p x.get_location_coordinates[1].class
