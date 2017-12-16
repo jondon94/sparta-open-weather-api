@@ -23,7 +23,7 @@ class CurrentWeatherData
   end
 
   def get_city_weather_info
-    
+    get_city_info['weather']
   end
 
 end
@@ -32,3 +32,4 @@ x = CurrentWeatherData.new
 # p x.get_city_info.class
 # p x.get_location_coordinates.class
 # p x.get_location_coordinates[1].class
+# p x.get_city_weather_info.class

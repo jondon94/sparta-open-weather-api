@@ -16,5 +16,9 @@ describe CurrentWeatherInfo do
       expect(@citycode.get_location_coordinates).to be_kind_of(Hash)
     end
 
+    it "should have an array of information concerning weather" do
+
+    end
+
   end
 end
