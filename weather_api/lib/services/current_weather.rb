@@ -14,16 +14,19 @@ class CurrentWeatherData
   end
 
   def get_city_info
-    get_city('wrexham')
+    get_city('london')
   end
 
   def get_location_coordinates
-    # get_city_info.first - Array
     get_city_info.first[1]
   end
 
-  def get_city_weather_info
+  def get_city_weather
     get_city_info['weather']
+  end
+
+  def get_city_weather_temp
+    get_city_info['main']
   end
 
 end
@@ -32,4 +35,7 @@ x = CurrentWeatherData.new
 # p x.get_city_info.class
 # p x.get_location_coordinates.class
 # p x.get_location_coordinates[1].class
-# p x.get_city_weather_info.class
+# p x.get_city_weather.class
+# p x.get_city_weather
+# p x.get_city_weather_temp.class
+# p x.get_city_weather_temp
