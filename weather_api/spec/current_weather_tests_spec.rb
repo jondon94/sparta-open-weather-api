@@ -47,5 +47,9 @@ describe CurrentWeatherInfo do
     it "should have a wind hash with 2 elements" do
       expect(@citycode.get_city_weather_wind.count).to eq(2)
     end
+
+    it "should have the correct name of the city in question" do
+      expect(@citycode.get_city_name).to eql('London')
+    end
   end
 end

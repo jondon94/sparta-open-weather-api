@@ -44,11 +44,15 @@ class CurrentWeatherData
   def get_city_weather_wind
     get_city_info['wind']
   end
+
+  def get_city_name
+    get_city_info['name']
+  end
 end
 
 x = CurrentWeatherData.new
 # p x.get_city_info.class
-# p x.get_city_info
+p x.get_city_info
 # p x.get_location_coordinates.class
 # p x.get_location_coordinates
 # p x.get_city_weather.class
@@ -59,4 +63,4 @@ x = CurrentWeatherData.new
 # p x.get_all_city_weather.class
 # p x.get_city_weather_visibility
 # p x.get_city_weather_wind
-p x.get_city_confirm_cod
+# p x.get_city_confirm_cod
