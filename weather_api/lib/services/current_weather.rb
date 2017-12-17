@@ -17,6 +17,10 @@ class CurrentWeatherData
     get_city('london')
   end
 
+  def get_city_confirm_cod
+    get_city_info['cod']
+  end
+
   def get_location_coordinates
     get_city_info.first[1]
   end
@@ -29,13 +33,30 @@ class CurrentWeatherData
     get_city_info['main']
   end
 
+  def confirm_all_city_weather
+    get_city_weather[0].count
+  end
+
+  def get_city_weather_visibility
+    get_city_info['visibility']
+  end
+
+  def get_city_weather_wind
+    get_city_info['wind']
+  end
 end
 
 x = CurrentWeatherData.new
 # p x.get_city_info.class
+# p x.get_city_info
 # p x.get_location_coordinates.class
-# p x.get_location_coordinates[1].class
+# p x.get_location_coordinates
 # p x.get_city_weather.class
 # p x.get_city_weather
 # p x.get_city_weather_temp.class
 # p x.get_city_weather_temp
+# p x.confirm_all_city_weather
+# p x.get_all_city_weather.class
+# p x.get_city_weather_visibility
+# p x.get_city_weather_wind
+p x.get_city_confirm_cod
