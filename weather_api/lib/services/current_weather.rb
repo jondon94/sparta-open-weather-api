@@ -14,7 +14,7 @@ class CurrentWeatherData
   end
 
   def get_city_info
-    get_city('london')
+    get_city('wrexham')
   end
 
   def get_city_confirm_cod
@@ -52,11 +52,11 @@ end
 
 x = CurrentWeatherData.new
 # p x.get_city_info.class
-# p x.get_city_info
+p x.get_city_info
 # p x.get_location_coordinates.class
 # p x.get_location_coordinates
 # p x.get_city_weather.class
-p x.get_city_weather
+# p x.get_city_weather
 # p x.get_city_weather_temp.class
 # p x.get_city_weather_temp
 # p x.confirm_all_city_weather
