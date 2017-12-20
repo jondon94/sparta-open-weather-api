@@ -7,14 +7,14 @@ class CurrentWeatherData
   attr_accessor :current_weather_data
 
   # base_uri 'http://api.openweathermap.org/data/2.5/forecast?id='
-  base_uri 'http://api.openweathermap.org/data/2.5/weather?q='
+  base_uri 'http://api.openweathermap.org/data/2.5/weather?id='
 
-  def get_city(city)
-    @current_weather_data = JSON.parse(self.class.get("#{city}&appid=316505207108df506a37ada56dd72578").body)
+  def get_city(id)
+    @current_weather_data = JSON.parse(self.class.get("#{id}&appid=316505207108df506a37ada56dd72578").body)
   end
 
   def get_city_info
-    get_city('wrexham')
+    get_city(2633484)
   end
 
   def get_city_confirm_cod
